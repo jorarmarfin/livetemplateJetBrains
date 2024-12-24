@@ -1,0 +1,27 @@
+export const localStorageHelper = () => {
+    const setStorage = (key, value) => {
+        localStorage.setItem(key, JSON.stringify(value));
+    }
+    const getStorage = (key) => {
+        return JSON.parse(localStorage.getItem(key));
+    }
+    const deleteStorage = (key) => {
+        localStorage.removeItem(key);
+    }
+    const deleteIdStorage = (key, id) => {
+        const data = JSON.parse(localStorage.getItem(key));
+        const newData = data.filter(item => item.id !== id);
+        localStorage.setItem(key, JSON.stringify(newData));
+    }
+    const deleteMultipleStorage = (keys) => {
+        keys.forEach(key => localStorage.removeItem(key));
+    }
+
+    return {
+        setStorage,
+        getStorage,
+        deleteStorage,
+        deleteIdStorage,
+        deleteMultipleStorage
+    }
+}

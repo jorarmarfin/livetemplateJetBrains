@@ -1,0 +1,18 @@
+import {useState} from "react";
+
+export const usePopup = () => {
+    const [Modal, setModal] = useState()
+    const openModal = () => {
+        setModal(true);
+    }
+
+    const closeModal = () => {
+        setModal(false);
+    }
+
+    return {
+        Modal,
+        openModal,
+        closeModal
+    }
+}

@@ -1,0 +1,73 @@
+
+body {
+    @apply mx-auto;
+}
+
+h1 {
+    @apply text-3xl font-bold;
+}
+p {
+    @apply text-lg;
+}
+ul {
+    @apply list-disc list-inside;
+}
+ul>li {
+    @apply text-sm;
+}
+
+.table th, .table td {
+    @apply border border-gray-300 py-2 px-2;
+}
+
+.table tbody tr:nth-child(2n+1) {
+    @apply bg-gray-200;
+}
+
+/* Add this to src/index.css */
+.table tbody tr:hover {
+    @apply bg-gray-300;
+}
+.btn {
+    @apply bg-blue-500 p-2 text-white hover:bg-blue-600  rounded ;
+}
+.btn-danger {
+    @apply bg-red-500 p-2 text-white hover:bg-red-600  rounded ;
+}
+.btn-action {
+    @apply flex flex-col border p-2 mx-1 border-plomoRata rounded items-center justify-center space-x-2 hover:bg-amarilloBebe;
+}
+.card {
+    @apply bg-white shadow-md p-4 rounded-lg m-4;
+}
+/* Estilos para el contenedor de paginación */
+.pagination {
+    @apply flex justify-center space-x-2 mt-4;
+}
+
+/* Estilos para cada botón de paginación */
+.pagination li {
+    @apply inline-block border border-gray-300 rounded-md px-3 py-1 cursor-pointer text-gray-700 hover:bg-gray-100 hover:text-blue-500;
+}
+
+/* Estilos para el botón activo */
+.pagination .active {
+    @apply bg-blue-500 text-white border-blue-500;
+}
+
+/* Estilos para los botones "Anterior", "Siguiente", "Primero", y "Último" */
+.pagination .previous,
+.pagination .next{
+    @apply border border-gray-300 rounded-md px-3 py-1 text-gray-700 hover:bg-gray-100 hover:text-blue-500;
+}
+
+
+/* Estilos para los botones de "Anterior" y "Siguiente" */
+.pagination .previous,
+.pagination .next {
+    @apply border border-gray-300 rounded-md px-3 py-1 text-gray-700 hover:bg-gray-100 hover:text-blue-500;
+}
+/*Estilos para Formularios*/
+.select {
+    @apply block w-full p-2 border border-gray-300 rounded;
+}

@@ -1,0 +1,31 @@
+// eslint-disable-next-line react/prop-types
+import {XCircleIcon} from "@heroicons/react/16/solid/index.js";
+import {useState} from "react";
+
+export const Popup = ({ title, children, onClose }) => {
+    const [closing, setClosing] = useState(false)
+    const handleClose = () => {
+        setClosing(true);
+        setTimeout(() => {
+            onClose();
+            setClosing(false);
+        }, 500);
+    }
+    return (
+        <div className={
+            `fixed inset-0 bg-gray-500 bg-opacity-50 flex justify-center items-center z-50 animate__animated
+            ${closing ? 'animate__fadeOutRight' : 'animate__fadeIn'}`
+        }>
+            <div className="bg-white p-5 rounded shadow-lg relative">
+                <button
+                    className="absolute top-0 right-0 m-2 text-gray-700 hover:text-black"
+                    onClick={handleClose}
+                >
+                    <XCircleIcon className="h-6 w-6" />
+                </button>
+                <h2 className="text-xl font-bold mb-4">{title}</h2>
+                {children}
+            </div>
+        </div>
+    );
+}
