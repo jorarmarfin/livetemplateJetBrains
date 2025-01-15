@@ -1,0 +1,8 @@
+@Get()
+  getCars() {
+    return this.carsService.getDataCars();
+  }
+  @Get(':id')
+  getCar( @Param('id', ParseIntPipe) id: number) {
+    return this.carsService.getCarById(id);
+  }
