@@ -1,0 +1,3 @@
+ServeStaticModule.forRoot({
+      rootPath: join(__dirname, '..', 'public'),
+    })

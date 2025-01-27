@@ -1,0 +1,7 @@
+export const getStaticPaths = (async () => {
+    const $services$ = await getCollection('$servicesContent$');
+    return services.map(($service$) => ({
+        params: {slug: service.id},
+        props: service,
+    }));
+}) satisfies GetStaticPaths;
