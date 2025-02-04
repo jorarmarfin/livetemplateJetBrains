@@ -1,0 +1,2 @@
+import { actions } from 'astro:actions';
+const {data,error} = await Astro.callAction(actions.getCategoriesAction, {cnt:4});
