@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.form-label {
+  @apply block text-sm font-medium text-gray-700;
+}
+
+.form-control {
+  @apply bg-gray-200 border-2 border-gray-300 rounded-lg p-2;
+}
+
+.form-checkbox-group{
+    @apply mb-4 flex items-center;
+}
+
+.form-checkbox-label {
+  @apply text-gray-700 font-medium;
+}
+
+.form-checkbox {
+  @apply h-5 w-5 text-blue-600 ml-2;
+}
+.btn {
+  @apply  font-medium py-2 px-4 rounded-lg;
+}
+.btn-primary {
+  @apply bg-blue-500 text-white;
+}
+
+.btn-danger {
+  @apply bg-red-500;
+}
+.btn-success {
+  @apply bg-green-500;
+}
