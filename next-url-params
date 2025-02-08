@@ -1,0 +1,2 @@
+const {searchParams} = new URL(request.url);
+const take = searchParams.get("take") ?? '10';
