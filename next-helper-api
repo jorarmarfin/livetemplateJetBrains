@@ -11,5 +11,5 @@ export const updateTodo = async (id: string, complete:boolean):Promise<tasks> =>
             "Content-Type": "application/json"
         }
     }).then(res => res.json());
-    return await response.json({response});
+    return response;
 }
