@@ -1,0 +1,15 @@
+import {tasks} from "@prisma/client";
+
+export const updateTodo = async (id: string, complete:boolean):Promise<tasks> => {
+    const body = {
+        complete
+    }
+    const response = await fetch(`/api/get-all-tasks/${id}`, {
+        method: "PUT",
+        body: JSON.stringify(body),
+        headers: {
+            "Content-Type": "application/json"
+        }
+    }).then(res => res.json());
+    return await response.json({response});
+}
